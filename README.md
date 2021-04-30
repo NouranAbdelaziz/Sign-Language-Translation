@@ -18,7 +18,7 @@ tzq config/sfl-fp16.yml test
 Doing these steps will result in the output file hyp.txt which is the corresponding glosses of the test RWTH-PHOENIX-2014 dataset. It should be now fed as an input to the transformer model 
 # Testing the Transformer model:
 1. Clone the Transformer model code from [here](https://github.com/kayoyin/transformer-slt)
-2. Copy the hyp.txt file inside the path /stochastic-cslr-main/stochastic-cslr-main/results/sfl-fp16/30/test an place it in the path /transformer-slt/data
+2. Copy the hyp.txt file inside the path /stochastic-cslr-main/stochastic-cslr-main/results/sfl-fp16/30/test and place it in the path /transformer-slt/data
 3. Place the folders [model_step_11.pt](), [model_step_12.pt](), and [model_step_13.pt]() inside the path /transformer-slt
 4. Run the following command inside /transformer-slt path to do testing while ensembling the weights of the best 3 models
 ```
