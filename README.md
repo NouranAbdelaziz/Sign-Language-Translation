@@ -19,7 +19,7 @@ Doing these steps will result in the output file hyp.txt which is the correspond
 # Testing the Transformer model:
 1. Clone the Transformer model code from [here](https://github.com/kayoyin/transformer-slt)
 2. Copy the hyp.txt file inside the path /stochastic-cslr-main/stochastic-cslr-main/results/sfl-fp16/30/test and place it in the path /transformer-slt/data
-3. Place the files model_step_11.pt, model_step_12.pt, and model_step_13.pt (you will find in the folder [Transformer Final Models]()) inside the path /transformer-slt
+3. Place the files model_step_11.pt, model_step_12.pt, and model_step_13.pt (you will find them in the folder [Transformer Final Models](https://github.com/NouranAbdelaziz/Sign-Language-Translation/tree/main/Transformer%20Final%20Models)) inside the path /transformer-slt
 4. Run the following command inside /transformer-slt path to do testing while ensembling the weights of the best 3 models
 ```
 python translate.py -model model_step_11.pt model_step_12.pt model_step_13.pt -src data/hyp.txt -output pred.txt -gpu 0 -replace_unk -beam_size 4
