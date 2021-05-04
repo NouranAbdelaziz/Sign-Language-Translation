@@ -9,15 +9,15 @@ This model is a combination between two models. The first one is [Stochastic CSL
 * Install sclite for evaluating the recognition model alone using WER
 * Download [RWTH-PHOENIX-2014](https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX/) datset
 # Testing the Stochastic CSLR model:
-1. Clone the stochastic CSLR model from [here](https://github.com/zheniu/stochastic-cslr)
-2. Place the folder [ckpt]() inside the /stochastic-cslr-main path
+1. Download and unzip the model code from the folder [Stochastic CSLR](https://github.com/NouranAbdelaziz/Sign-Language-Translation/tree/main/Stochastic%20CSLR)
+2. Place the folder ckpt ( you will find inside [CSLR Final Model](https://github.com/NouranAbdelaziz/Sign-Language-Translation/tree/main/CSLR%20Final%20Model)) inside the /stochastic-cslr-main path
 3. Run the following command inside the /stochastic-cslr-main path to test the existing model
 ```
 tzq config/sfl-fp16.yml test
 ```
 Doing these steps will result in the output file hyp.txt which is the corresponding glosses of the test RWTH-PHOENIX-2014 dataset. It should be now fed as an input to the transformer model 
 # Testing the Transformer model:
-1. Clone the Transformer model code from [here](https://github.com/kayoyin/transformer-slt)
+1. Download and unzip the model code from the folder [Transformer](https://github.com/NouranAbdelaziz/Sign-Language-Translation/tree/main/Transformer)
 2. Copy the hyp.txt file inside the path /stochastic-cslr-main/stochastic-cslr-main/results/sfl-fp16/30/test and place it in the path /transformer-slt/data
 3. Place the files model_step_11.pt, model_step_12.pt, and model_step_13.pt (you will find them in the folder [Transformer Final Models](https://github.com/NouranAbdelaziz/Sign-Language-Translation/tree/main/Transformer%20Final%20Models)) inside the path /transformer-slt
 4. Run the following command inside /transformer-slt path to do testing while ensembling the weights of the best 3 models
